@@ -43,7 +43,7 @@ jobs:
 
       - name: Package Game Library
         shell: pwsh
-        run: Compress-Archive -Path milody-game -DestinationPath "milody-game-${{ env.MILODY_TARGET_OS }}-${{ env.MILODY_TARGET_ARCH }}.zip"
+        run: Compress-Archive -Path milody-game BindingC.cs FrameworkBinding.cpp -DestinationPath "milody-game-${{ env.MILODY_TARGET_OS }}-${{ env.MILODY_TARGET_ARCH }}.zip"
 
       - name: Upload Game Artifact
         uses: actions/upload-artifact@v4
